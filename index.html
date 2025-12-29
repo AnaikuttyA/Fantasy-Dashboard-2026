@@ -7,6 +7,7 @@
 <style>
 body { font-family: Arial; background:#f4f6f8; padding:20px; }
 h1 { margin-bottom: 6px; }
+
 .summary {
   background: white;
   padding: 12px;
@@ -14,11 +15,40 @@ h1 { margin-bottom: 6px; }
   border-left: 6px solid #111;
   font-size: 16px;
 }
+
 table { width:100%; border-collapse:collapse; background:white; }
 th,td { border:1px solid #ccc; padding:6px; text-align:center; }
-th { background:#111; color:white; position: sticky; top: 0; }
+
+th {
+  background:#111;
+  color:white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 input { padding:6px; margin:4px; width:220px; }
-.table-container { overflow-x:auto; max-height:500px; overflow-y:auto; }
+
+.table-container {
+  overflow-x:auto;
+  max-height:500px;
+  overflow-y:auto;
+}
+
+/* 🔒 FIX PLAYER COLUMN */
+.sticky-player {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 3;
+  font-weight: bold;
+}
+
+/* header for sticky player */
+th.sticky-player {
+  background: #000;
+  z-index: 4;
+}
 </style>
 </head>
 
@@ -69,7 +99,7 @@ rankBody.innerHTML = rankData.map(r =>
   </tr>`
 ).join("");
 
-/* ===== POINTS TABLE ===== */
+/* ===== POINTS TABLE WITH STICKY PLAYER ===== */
 function buildPointsTable(data){
   if(data.length === 0){
     pointsHead.innerHTML = "";
@@ -78,11 +108,24 @@ function buildPointsTable(data){
   }
 
   const cols = Object.keys(data[0]);
+
   pointsHead.innerHTML =
-    "<tr>" + cols.map(c => `<th>${c}</th>`).join("") + "</tr>";
+    "<tr>" +
+    cols.map(c =>
+      c === "player"
+        ? `<th class="sticky-player">${c}</th>`
+        : `<th>${c}</th>`
+    ).join("") +
+    "</tr>";
 
   pointsBody.innerHTML = data.map(row =>
-    "<tr>" + cols.map(c => `<td>${row[c]}</td>`).join("") + "</tr>"
+    "<tr>" +
+    cols.map(c =>
+      c === "player"
+        ? `<td class="sticky-player">${row[c]}</td>`
+        : `<td>${row[c]}</td>`
+    ).join("") +
+    "</tr>"
   ).join("");
 }
 
