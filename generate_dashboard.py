@@ -41,7 +41,7 @@ all_matches_df = pd.concat(dfs, ignore_index=True)
 
 df = all_matches_df.copy()
 
-df = df[df['season'].isin(['2024',2024])]
+df = df[df['season'].isin(['2023',2023])]
 
 attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','Mukesh Kumar',
              'AJ Hosein','V Suryavanshi','A Mhatre','Shashank Singh','V Nigam','PP Shaw','PHKD Mendis',
@@ -259,20 +259,26 @@ def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
 rank_df, total_points_df = fantasy_points(df,total_points_df_download=0,rank_df_download=0)
 matches_completed = df['match_id'].nunique()
 
-# ---------- BUILD HTML ----------
+# =========================
+# BUILD HTML FROM TEMPLATE
+# =========================
+
+# ---------- BUILD HTML (CORRECT WAY) ----------
 
 rank_json = rank_df.to_json(orient="records")
 points_json = total_points_df.fillna("").to_json(orient="records")
 
-
-with open("index.html", "r", encoding="utf-8") as f:
+# 🔑 ALWAYS READ TEMPLATE
+with open("template.html", "r", encoding="utf-8") as f:
     html = f.read()
 
 html = html.replace("{{RANK_DATA}}", rank_json)
 html = html.replace("{{POINTS_DATA}}", points_json)
 html = html.replace("{{MATCHES_COMPLETED}}", str(matches_completed))
 
+# 🔑 ALWAYS WRITE INDEX
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-print(" index.html updated successfully")
+print("index.html updated successfully")
+
