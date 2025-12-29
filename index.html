@@ -32,7 +32,7 @@ th, td {
   border:1px solid #ccc;
   padding:4px;
   text-align:center;
-  height:32px;        /* fixed row height */
+  height:32px;
   white-space: nowrap;
 }
 
@@ -52,11 +52,11 @@ input {
   width:220px;
 }
 
-/* ===== SCROLL CONTAINER (≈25 ROWS) ===== */
+/* ===== SCROLL CONTAINER ===== */
 .table-container {
   overflow-x: auto;
   overflow-y: auto;
-  max-height: 800px;   /* 25 × 32px */
+  max-height: 800px; /* ~25 rows */
   border: 1px solid #ccc;
 }
 
@@ -69,7 +69,6 @@ input {
   font-weight: bold;
 }
 
-/* Sticky header for player */
 th.sticky-player {
   background: #000;
   z-index: 4;
@@ -124,7 +123,7 @@ rankBody.innerHTML = rankData.map(r =>
   </tr>`
 ).join("");
 
-/* ===== BUILD POINTS TABLE ===== */
+/* ===== BUILD POINTS TABLE (FIXED COLUMN ORDER) ===== */
 function buildPointsTable(data){
   if(data.length === 0){
     pointsHead.innerHTML = "";
@@ -132,23 +131,31 @@ function buildPointsTable(data){
     return;
   }
 
-  const cols = Object.keys(data[0]);
+  const fixedCols = ["match_id", "player", "auction_team", "total_points"];
+  const allCols = Object.keys(data[0]);
 
+  // remaining columns (excluding fixed ones)
+  const remainingCols = allCols.filter(c => !fixedCols.includes(c));
+
+  const finalCols = [...fixedCols, ...remainingCols];
+
+  /* ----- HEADER ----- */
   pointsHead.innerHTML =
     "<tr>" +
-    cols.map(c =>
+    finalCols.map(c =>
       c === "player"
         ? `<th class="sticky-player">${c}</th>`
         : `<th>${c}</th>`
     ).join("") +
     "</tr>";
 
+  /* ----- BODY ----- */
   pointsBody.innerHTML = data.map(row =>
     "<tr>" +
-    cols.map(c =>
+    finalCols.map(c =>
       c === "player"
-        ? `<td class="sticky-player">${row[c]}</td>`
-        : `<td>${row[c]}</td>`
+        ? `<td class="sticky-player">${row[c] ?? ""}</td>`
+        : `<td>${row[c] ?? ""}</td>`
     ).join("") +
     "</tr>"
   ).join("");
