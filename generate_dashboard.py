@@ -41,7 +41,7 @@ all_matches_df = pd.concat(dfs, ignore_index=True)
 
 df = all_matches_df.copy()
 
-df = df[df['season'].isin(['2023',2023])]
+df = df[df['season'].isin([2025,'2025'])]
 
 attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','Mukesh Kumar',
              'AJ Hosein','V Suryavanshi','A Mhatre','Shashank Singh','V Nigam','PP Shaw','PHKD Mendis',
