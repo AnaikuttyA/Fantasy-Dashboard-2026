@@ -5,7 +5,12 @@
 <title>Fantasy Auction Dashboard</title>
 
 <style>
-body { font-family: Arial; background:#f4f6f8; padding:20px; }
+body {
+  font-family: Arial;
+  background:#f4f6f8;
+  padding:20px;
+}
+
 h1 { margin-bottom: 6px; }
 
 .summary {
@@ -16,9 +21,22 @@ h1 { margin-bottom: 6px; }
   font-size: 16px;
 }
 
-table { width:100%; border-collapse:collapse; background:white; }
-th,td { border:1px solid #ccc; padding:6px; text-align:center; }
+/* ===== TABLE BASE ===== */
+table {
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+}
 
+th, td {
+  border:1px solid #ccc;
+  padding:4px;
+  text-align:center;
+  height:32px;        /* fixed row height */
+  white-space: nowrap;
+}
+
+/* ===== STICKY HEADER ===== */
 th {
   background:#111;
   color:white;
@@ -27,15 +45,22 @@ th {
   z-index: 2;
 }
 
-input { padding:6px; margin:4px; width:220px; }
-
-.table-container {
-  overflow-x:auto;
-  max-height:500px;
-  overflow-y:auto;
+/* ===== FILTER INPUTS ===== */
+input {
+  padding:6px;
+  margin:4px;
+  width:220px;
 }
 
-/* 🔒 FIX PLAYER COLUMN */
+/* ===== SCROLL CONTAINER (≈25 ROWS) ===== */
+.table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 800px;   /* 25 × 32px */
+  border: 1px solid #ccc;
+}
+
+/* ===== STICKY PLAYER COLUMN ===== */
 .sticky-player {
   position: sticky;
   left: 0;
@@ -44,7 +69,7 @@ input { padding:6px; margin:4px; width:220px; }
   font-weight: bold;
 }
 
-/* header for sticky player */
+/* Sticky header for player */
 th.sticky-player {
   background: #000;
   z-index: 4;
@@ -80,8 +105,8 @@ th.sticky-player {
 
 <div class="table-container">
 <table>
-<thead id="pointsHead"></thead>
-<tbody id="pointsBody"></tbody>
+  <thead id="pointsHead"></thead>
+  <tbody id="pointsBody"></tbody>
 </table>
 </div>
 
@@ -99,7 +124,7 @@ rankBody.innerHTML = rankData.map(r =>
   </tr>`
 ).join("");
 
-/* ===== POINTS TABLE WITH STICKY PLAYER ===== */
+/* ===== BUILD POINTS TABLE ===== */
 function buildPointsTable(data){
   if(data.length === 0){
     pointsHead.innerHTML = "";
@@ -129,7 +154,7 @@ function buildPointsTable(data){
   ).join("");
 }
 
-/* ===== FILTERS ===== */
+/* ===== FILTER LOGIC ===== */
 function applyFilters(){
   const m = matchFilter.value.toLowerCase();
   const p = playerFilter.value.toLowerCase();
@@ -148,7 +173,7 @@ matchFilter.oninput = applyFilters;
 playerFilter.oninput = applyFilters;
 teamFilter.oninput = applyFilters;
 
-/* INITIAL LOAD */
+/* ===== INITIAL LOAD ===== */
 buildPointsTable(pointsData);
 </script>
 
