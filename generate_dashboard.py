@@ -41,7 +41,10 @@ all_matches_df = pd.concat(dfs, ignore_index=True)
 
 df = all_matches_df.copy()
 
-df = df[df['season'].isin([2025,'2025'])]
+if ('2026' in df['season'].unique()) or (2026 in df['season'].unique()):
+    df = df[df['season'].isin([2026,'2026'])]
+else:
+    df = df[df['season'].isin([2025,'2025'])]
 
 attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','Mukesh Kumar',
              'AJ Hosein','V Suryavanshi','A Mhatre','Shashank Singh','V Nigam','PP Shaw','PHKD Mendis',
@@ -108,6 +111,7 @@ def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
     #captain and Vice-Captain Boost
     boost_df = pd.DataFrame({'player':[],
                              'BOOST':[]})
+    boost_df['player'] = boost_df['player'].astype('str')
 
     #Featue Engineering
 
