@@ -355,9 +355,9 @@ matches_completed = df['match_id'].nunique()
 
 import json
 
-rank_json_01 = json.dumps(rank_tour_01.to_dict(orient='records'))
-rank_json_02 = json.dumps(rank_tour_02.to_dict(orient='records'))
-points_json = json.dumps(total_points_df.to_dict(orient='records'))
+rank_json_01 = rank_tour_01.to_json(orient='records')
+rank_json_02 = rank_tour_02.to_json(orient='records')
+points_json = total_points_df.to_json(orient='records')
 
 with open("template.html", "r", encoding="utf-8") as f:
     html = f.read()
