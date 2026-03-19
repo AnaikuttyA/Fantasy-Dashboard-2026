@@ -10,6 +10,7 @@ pd.set_option('display.max_columns',None)
 pd.set_option('display.expand_frame_repr',False)
 pd.set_option('max_colwidth',25)
 
+
 import pandas as pd
 import requests
 import zipfile
@@ -45,6 +46,8 @@ if ('2026' in df['season'].unique()) or (2026 in df['season'].unique()):
     df = df[df['season'].isin([2026,'2026'])]
 else:
     df = df[df['season'].isin([2025,'2025'])]
+
+#Feeding players to teams
 
 attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','Mukesh Kumar',
              'AJ Hosein','V Suryavanshi','A Mhatre','Shashank Singh','V Nigam','PP Shaw','PHKD Mendis',
@@ -89,7 +92,46 @@ vsk = ['YBK Jaiswal','RG Sharma','TM Head','Abhishek Sharma','NT Ellis','SO Hetm
        'Arshad Khan','Mohsin Khan','M Markande','Vijaykumar Vyshak','MJ Owen','MW Short','R Ravindra',
        'SB Dubey','PH Solanki'] # 3 Playersr reamining
 
-all_teams = {'attackers':attackers,
+#Tour_02 Teams
+
+xi_strikers = ['RD Gaikwad','HH Pandya','Ishan Kishan','H Klaasen','T Stubbs','Ramandeep Singh',
+               'Dhruv Jurel','A Mhatre','Vishnu Vinod','V Puthur','PP Shaw','MJ Owen','Akash Singh',] #6players missing
+
+rebels = ['YBK Jaiswal','C Green','TM Head','JC Buttler','N Rana','Sameer Rizvi',
+          'V Suryavanshi','V Nigam','Prince Yadav','WG Jacks','Zeeshan Ansari'] #12 players remaining
+
+rcb_xii = ['Shubman Gill','SA Yadav','PD Salt','JM Sharma','RM Patidar','PJ Cummins',
+           'JO Holder','Azmatullah Omarzai','R Minz','S Gopal','DS Rathi','M Siddharth',
+           'J Overton','R Ravindra','LS Livingstone','MJ Henry','Yash Dayal'] # 3 players missing
+
+defending_champions = ['SS Iyer','V Kohli','SP Narine','RR Pant','Noor Ahmad','TH David','M Prasidh Krishna',
+                       'MS Dhoni','Mohsin Khan','R Powell','J Yadav','PHKD Mendis','I Sharma',
+                       'Umran Malik','Shivam Mavi','MK Pandey','Ashwani Kumar','Musheer Khan',]  #7 palyer missing
+
+bloodline = ['S Dube', 'RA Jadeja', 'M Jansen', 'SV Samson', 'JC Archer', 'NT Ellis', 'D Brevis',
+              'VR Iyer', 'JP Inglis', 'T Natarajan', 'K Rabada', 'R Sai Kishore', 'Naman Dhir', 
+              'Vijaykumar Vyshak', 'Sandeep Sharma', 'KK Nair', 'A Nortje', 'SB Dubey'] # 4 players missing
+
+team_r_d = ['MR Marsh', 'Abhishek Sharma', 'N Pooran', 'JJ Bumrah', 'JR Hazlewood', 'B Sai Sudharsan', 'MJ Santner', 
+            'RD Chahar', 'P Simran Singh', 'Aniket Verma', 'Harsh Dubey', 'Kartik Tyagi', 'Yash Thakur', 
+            'DA Miller', 'SN Khan'] #9 players missing
+
+_7th_gear = ['Q de Kock', 'B Kumar', 'KK Ahmed', 'CV Varun', 'AM Rahane', 'Washington Sundar', 
+             'MP Stoinis', 'R Parag', 'KH Pandya', 'Nithish Kumar Reddy', 'N Burger', 'DL Chahar', 
+             'LH Ferguson', 'Avesh Khan', 'AS Roy', 'M Shahrukh Khan', 'Abishek Porel', 'VG Arora', 'Harpreet Brar', 
+             'Suyash Sharma', 'MP Yadav',] #4 plpayer missing
+
+attackers_xii = ['KL Rahul', 'SO Hetmyer', 'SN Thakur', 'Mukesh Kumar', 'TU Deshpande', 'AJ Hosein', 
+                 'JD Unadkat', 'N Wadhera', 'Priyansh Arya', 'Abdul Samad', 'A Badoni', 'Arjun Tendulkar', 
+                 'Shashank Singh', 'Urvil Patel', 'Mukesh Choudhary', 'SM Curran'] #8 players missing
+
+sonu_48 = ['Rashid Khan', 'YS Chahal', 'Ravi Bishnoi', 'AK Markram', 'RK Singh', 'SE Rutherford', 'MA Starc', 
+           'Anuj Rawat', 'Arshad Khan', 'M Markande', 'D Padikkal', 'RA Tripathi', 'R Tewatia', 'D Ferreira', 'Akash Deep', 'A Kamboj', 'Rasikh Salam']
+
+#################
+### TOURNAMENT 01 TEAMS ###
+
+tour_01 = {'attackers':attackers,
              'bcc':bcc,
              'blazing_titans':blazing_titans,
              'eleven_stars':eleven_stars,
@@ -101,7 +143,33 @@ all_teams = {'attackers':attackers,
              'vsk':vsk
 }
 
-def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
+#captain and Vice-Captain Boost
+tour_01_boost_df = pd.DataFrame({'player':[],
+                            'BOOST':[]})
+
+###################
+###################
+
+###################
+### TOURNAMENT 02 TEAMS ###
+
+tour_02 = {'attackers_xii':attackers_xii,
+           'rebels':rebels,
+           'rcb_xii':rcb_xii,
+           'defending_champions':defending_champions,
+           'team_r_d':team_r_d,
+           'bloodline':bloodline,
+           '7th_gear':_7th_gear,
+           'xi_strikers':xi_strikers,
+           'sonu_48':sonu_48}
+
+tour_02_boost_df = pd.DataFrame({'player':[],
+                            'BOOST':[]})
+
+#####################
+#####################
+
+def total_points_df_return(df): #returns total_points_df
 
     #Match Info
     match_info = df.groupby(['match_id']).agg({'batting_team':'first','bowling_team':'first'}).reset_index()
@@ -109,9 +177,6 @@ def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
     match_info.rename(columns={'batting_team':'team_1','bowling_team':'team_2'}, inplace=True)
 
     #captain and Vice-Captain Boost
-    boost_df = pd.DataFrame({'player':[],
-                             'BOOST':[]})
-    boost_df['player'] = boost_df['player'].astype('str')
 
     #Featue Engineering
 
@@ -202,7 +267,7 @@ def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
 
     total_points_df['total_points'] = total_points_df['total_batting_points'] + total_points_df['total_bowling_points']
 
-    total_points_df['auction_team'] = total_points_df['player'].apply(lambda x: 'attackers' if x in attackers else
+    total_points_df['auction_tour_01'] = total_points_df['player'].apply(lambda x: 'attackers' if x in attackers else
                                                                       'bcc' if x in bcc else
                                                                       'blazing titans' if x in blazing_titans else
                                                                       'eleven_stars' if x in eleven_stars else
@@ -213,14 +278,33 @@ def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
                                                                       'thalasons' if x in thalasons else
                                                                       'vsk' if x in vsk else 
                                                                       np.nan)
+    
+    total_points_df['auction_tour_02'] = total_points_df['player'].apply(lambda x: 'attackers_xii' if x in attackers_xii else
+                                                                         'bloodline' if x in bloodline else
+                                                                         '_7th_gear' if x in _7th_gear else
+                                                                         'defending_champions' if x in defending_champions else
+                                                                         'team_r_d' if x in team_r_d else
+                                                                         'rebels' if x in rebels else
+                                                                         'rcb_xii' if x in rcb_xii else
+                                                                         'xi_strikers' if x in xi_strikers else
+                                                                         'sonu_48' if x in sonu_48 else 
+                                                                         np.nan)
 
     ###########################
     # Download total_points_df to get match by match player points
     ############################
     
-    #Final df Total points for Players
-    final_df = total_points_df.groupby(['player']).agg({'total_points':'sum', 'auction_team':'first'}).reset_index().sort_values(by='total_points',ascending=False)
+    #total_points_df df Total points for Players
+    final_df = total_points_df.groupby(['player']).agg({'total_points':'sum', 'auction_tour_01':'first','auction_tour_02':'first'}).reset_index().sort_values(by='total_points',ascending=False)
     final_df.rename(columns={'total_points':'points'},inplace=True)
+
+    return total_points_df,final_df
+
+total_points_df,final_df = total_points_df_return(df)
+
+
+
+def rank_df_return(final_df,all_teams,boost_df): #returns rank_df
 
     # Adding Captaincy boost for player
     final_df = final_df.merge(boost_df, on='player',how='outer')
@@ -248,41 +332,40 @@ def fantasy_points(df,total_points_df_download=0,rank_df_download=0):
     rank_df = rank_df.sort_values(by='rank')
     ########################
 
-    if total_points_df_download == 1:
-        total_points_df.to_csv('Player Points 2025 Match by Match.csv', index=False)
-    if rank_df_download == 1:
-        rank_df.to_csv('Rank_df.csv', index=False)
     # print(total_points_df)
     print(rank_df)
     print('No. of Matches completed ', df['match_id'].nunique())
-    # print(total_points_df[total_points_df['auction_team']=='super knights'].head(100))
 
-    return rank_df, total_points_df
+    return rank_df
 
+rank_tour_01 = rank_df_return(final_df,
+                              all_teams=tour_01,
+                              boost_df=tour_01_boost_df)
 
-rank_df, total_points_df = fantasy_points(df,total_points_df_download=0,rank_df_download=0)
+rank_tour_02 = rank_df_return(final_df,
+                              all_teams=tour_02,
+                              boost_df=tour_02_boost_df)
+
 matches_completed = df['match_id'].nunique()
 
-# =========================
-# BUILD HTML FROM TEMPLATE
-# =========================
 
-# ---------- BUILD HTML (CORRECT WAY) ----------
+###################################
+###################################
+###################################
 
-rank_json = rank_df.to_json(orient="records")
-points_json = total_points_df.fillna("").to_json(orient="records")
+import json
 
-# 🔑 ALWAYS READ TEMPLATE
+rank_json_01 = json.dumps(rank_tour_01.to_dict(orient='records'))
+rank_json_02 = json.dumps(rank_tour_02.to_dict(orient='records'))
+points_json = json.dumps(total_points_df.to_dict(orient='records'))
+
 with open("template.html", "r", encoding="utf-8") as f:
     html = f.read()
 
-html = html.replace("{{RANK_DATA}}", rank_json)
+html = html.replace("{{RANK_DATA_01}}", rank_json_01)
+html = html.replace("{{RANK_DATA_02}}", rank_json_02)
 html = html.replace("{{POINTS_DATA}}", points_json)
-html = html.replace("{{MATCHES_COMPLETED}}", str(matches_completed))
+html = html.replace("{{MATCHES_COMPLETED}}", str(df['match_id'].nunique()))
 
-# 🔑 ALWAYS WRITE INDEX
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
-
-print("index.html updated successfully")
-
