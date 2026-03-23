@@ -128,6 +128,20 @@ attackers_xii = ['KL Rahul', 'SO Hetmyer', 'SN Thakur', 'Mukesh Kumar', 'TU Desh
 sonu_48 = ['Rashid Khan', 'YS Chahal', 'Ravi Bishnoi', 'AK Markram', 'RK Singh', 'SE Rutherford', 'MA Starc', 
            'Anuj Rawat', 'Arshad Khan', 'M Markande', 'D Padikkal', 'RA Tripathi', 'R Tewatia', 'D Ferreira', 'Akash Deep', 'A Kamboj', 'Rasikh Salam']
 
+################
+### Bidstrom Auction Teams ####
+
+sonu_48_bs = []
+bsmj = []
+wildwolves = []
+rebels_bs = []
+roar_26 = []
+attackers_bs = []
+special_ones = []
+defending_champions_bs = []
+msk = []
+arsenal = []
+
 #################
 ### TOURNAMENT 01 TEAMS ###
 
@@ -164,6 +178,26 @@ tour_02 = {'attackers_xii':attackers_xii,
            'sonu_48':sonu_48}
 
 tour_02_boost_df = pd.DataFrame({'player':[],
+                            'BOOST':[]})
+
+#####################
+#####################
+
+#####################
+###### BIDSTROM AUCTION 2.0 #######
+
+bidstrom_auction_2_0 = {'sonu_48_bs':sonu_48_bs,
+                        'bsmj':bsmj,
+                        'wildwolves':wildwolves,
+                        'rebels_bs':rebels_bs,
+                        'msk':msk,
+                        'roar_26':roar_26,
+                        'attackers_bs':attackers_bs,
+                        'special_ones':special_ones,
+                        'defending_champions_bs':defending_champions_bs,
+                        'arsenal':arsenal}
+
+bidstrom_auction_2_0_boost_df = pd.DataFrame({'player':[],
                             'BOOST':[]})
 
 #####################
@@ -289,6 +323,18 @@ def total_points_df_return(df): #returns total_points_df
                                                                          'xi_strikers' if x in xi_strikers else
                                                                          'sonu_48' if x in sonu_48 else 
                                                                          np.nan)
+    
+    total_points_df['bidstrom_auction_2.0_team'] = total_points_df['player'].apply(lambda x: 'attackers_bs' if x in attackers_bs else
+                                                                         'bsmj' if x in bsmj else
+                                                                         'special_ones' if x in special_ones else
+                                                                         'defending_champions_bs' if x in defending_champions_bs else
+                                                                         'wildwolves' if x in wildwolves else
+                                                                         'rebels_bs' if x in rebels_bs else
+                                                                         'roar_26' if x in roar_26 else
+                                                                         'arsenal' if x in arsenal else
+                                                                         'sonu_48_bs' if x in sonu_48_bs else 
+                                                                         'msk' if x in msk else
+                                                                         np.nan)
 
     ###########################
     # Download total_points_df to get match by match player points
@@ -324,7 +370,7 @@ def rank_df_return(final_df,all_teams,boost_df): #returns rank_df
     rank_df = pd.DataFrame({'teams': final_team_names[:10],
                         'points': final_team_points[:10]})
 
-    rank_df['rank'] = rank_df['points'].rank(ascending=False)
+    rank_df['rank'] = rank_df['points'].rank(ascending=False,method='min')
 
 
     ########################
@@ -346,6 +392,10 @@ rank_tour_02 = rank_df_return(final_df,
                               all_teams=tour_02,
                               boost_df=tour_02_boost_df)
 
+bidstrom_auction_2_0_rank_df = rank_df_return(final_df,
+                                              all_teams=bidstrom_auction_2_0,
+                                              boost_df=bidstrom_auction_2_0_boost_df)
+
 matches_completed = df['match_id'].nunique()
 
 
@@ -357,6 +407,7 @@ import json
 
 rank_json_01 = json.dumps(rank_tour_01.to_dict(orient='records'))
 rank_json_02 = json.dumps(rank_tour_02.to_dict(orient='records'))
+bidstrom_auction_2_0_json = json.dumps(bidstrom_auction_2_0_rank_df.to_dict(orient='records'))
 points_json = json.dumps(total_points_df.to_dict(orient='records'))
 
 with open("template.html", "r", encoding="utf-8") as f:
@@ -364,6 +415,7 @@ with open("template.html", "r", encoding="utf-8") as f:
 
 html = html.replace("{{RANK_DATA_01}}", rank_json_01)
 html = html.replace("{{RANK_DATA_02}}", rank_json_02)
+html = html.replace("{{BIDSTROM_RANK_DATA}}", bidstrom_auction_2_0_json)
 html = html.replace("{{POINTS_DATA}}", points_json)
 html = html.replace("{{MATCHES_COMPLETED}}", str(df['match_id'].nunique()))
 

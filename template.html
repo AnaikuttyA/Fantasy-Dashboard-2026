@@ -107,6 +107,20 @@ th.sticky-player {
 <tbody id="rankBody2"></tbody>
 </table>
 
+<br>
+
+<h2>🏆 Bidstrom Auction 2.0 Rankings</h2>
+<table>
+<thead>
+<tr>
+  <th>Rank</th>
+  <th>Team</th>
+  <th>Points</th>
+</tr>
+</thead>
+<tbody id="rankBody3"></tbody>
+</table>
+
 <!-- ================= FILTERS ================= -->
 
 <h2>📊 Total Points Table</h2>
@@ -117,6 +131,7 @@ th.sticky-player {
 <input id="team2Filter" placeholder="Auction Tour 02">
 <input id="team01Filter" placeholder="Team 01">
 <input id="team02Filter" placeholder="Team 02">
+<input id="bidstromFilter" placeholder="Bidstrom Auction 2.0 Team">
 
 <!-- ================= TABLE ================= -->
 
@@ -132,6 +147,7 @@ th.sticky-player {
 /* ===== DATA FROM PYTHON ===== */
 const rankData1 = {{RANK_DATA_01}};
 const rankData2 = {{RANK_DATA_02}};
+const rankData3 = {{BIDSTROM_RANK_DATA}};
 const pointsData = {{POINTS_DATA}};
 
 /* ===== RANK TABLE 1 ===== */
@@ -145,6 +161,15 @@ rankBody1.innerHTML = rankData1.map(r =>
 
 /* ===== RANK TABLE 2 ===== */
 rankBody2.innerHTML = rankData2.map(r =>
+  `<tr>
+    <td>${r.rank}</td>
+    <td>${r.teams}</td>
+    <td>${r.points}</td>
+  </tr>`
+).join("");
+
+/* ===== RANK TABLE 3 ===== */
+rankBody3.innerHTML = rankData3.map(r =>
   `<tr>
     <td>${r.rank}</td>
     <td>${r.teams}</td>
@@ -166,6 +191,7 @@ function buildPointsTable(data){
     "player",
     "auction_tour_01",
     "auction_tour_02",
+    "bidstrom_auction_2.0_team",
     "team_1",
     "team_2",
     "total_points"
@@ -186,8 +212,8 @@ function buildPointsTable(data){
     ).join("") +
     "</tr>";
 
-  /* BODY */
-  pointsBody.innerHTML = data.map(row =>
+  /* BODY (LIMIT FOR PERFORMANCE) */
+  pointsBody.innerHTML = data.slice(0, 500).map(row =>
     "<tr>" +
     finalCols.map(c =>
       c === "player"
@@ -207,6 +233,7 @@ function applyFilters(){
   const t2 = team2Filter.value.toLowerCase();
   const tm1 = team01Filter.value.toLowerCase();
   const tm2 = team02Filter.value.toLowerCase();
+  const bs = bidstromFilter.value.toLowerCase();
 
   buildPointsTable(
     pointsData.filter(r =>
@@ -215,7 +242,8 @@ function applyFilters(){
       String(r.auction_tour_01 || "").toLowerCase().includes(t1) &&
       String(r.auction_tour_02 || "").toLowerCase().includes(t2) &&
       String(r.team_1 || "").toLowerCase().includes(tm1) &&
-      String(r.team_2 || "").toLowerCase().includes(tm2)
+      String(r.team_2 || "").toLowerCase().includes(tm2) &&
+      String(r["bidstrom_auction_2.0_team"] || "").toLowerCase().includes(bs)
     )
   );
 }
@@ -227,6 +255,7 @@ team1Filter.oninput = applyFilters;
 team2Filter.oninput = applyFilters;
 team01Filter.oninput = applyFilters;
 team02Filter.oninput = applyFilters;
+bidstromFilter.oninput = applyFilters;
 
 /* ===== INITIAL LOAD ===== */
 buildPointsTable(pointsData);
