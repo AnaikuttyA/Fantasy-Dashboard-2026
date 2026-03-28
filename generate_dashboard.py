@@ -292,15 +292,15 @@ def total_points_df_return(df): #returns total_points_df
 
     # Economy, Wkt points, dot points, economy points
     bowling_df['economy'] = round(bowling_df['is_bowler_runs']/bowling_df['is_ball'] *6, 2)
-    bowling_df['bowling_wkt_points'] = bowling_df['is_bowl_out'] * 30
+    bowling_df['bowling_wkt_points'] = bowling_df['is_bowl_out'] * 35
     bowling_df['bowling_dot_points'] = bowling_df['isdot']
     bowling_df['bowling_economy_points'] = bowling_df.apply(lambda x: 0 if x['is_ball']<12 else
                                                             6 if x['economy'] < 5 else
                                                             4 if x['economy'] < 6 else
                                                             2 if x['economy'] < 7 else
-                                                            -2 if x['economy'] > 12 else
+                                                            -6 if x['economy'] > 12 else
                                                             -4 if x['economy'] > 11 else
-                                                            -6 if x['economy'] > 10 else 0, axis=1)
+                                                            -2 if x['economy'] > 10 else 0, axis=1)
     bowling_df['bowling_wkt_bonus'] = bowling_df['is_bowl_out'].apply(lambda x: 12 if x >= 5 else
                                                                     8 if x >= 4 else
                                                                     4 if x >= 3 else 0)
