@@ -60,7 +60,7 @@ bcc = ['SS Iyer','Rashid Khan','H Klaasen','TA Boult','JR Hazlewood','B Sai Sudh
 
 blazing_titans = ['Shubman Gill','Ishan Kishan','KK Ahmed','YS Chahal','E Malinga','T Stubbs','N Rana',
                   'SN Thakur','M Prasidh Krishna','DL Chahar','P Simran Singh','Naman Dhir','DS Rathi',
-                  'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh'] # 7 Players remaining
+                  'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh','JA Duffy'] # 7 Players remaining
 
 eleven_stars = ['SA Yadav','Tilak Varma','AR Patel','Arshdeep Singh','Harshit Rana','Kuldeep Yadav',
                 'HV Patel','C Bosch','GD Phillips','TL Seifert','A Raghuvanshi','Ashutosh Sharma',
@@ -106,7 +106,7 @@ rcb_xii = ['Shubman Gill','SA Yadav','PD Salt','JM Sharma','RM Patidar','PJ Cumm
 
 defending_champions = ['SS Iyer','V Kohli','SP Narine','RR Pant','Noor Ahmad','TH David','M Prasidh Krishna',
                        'MS Dhoni','Mohsin Khan','R Powell','J Yadav','PHKD Mendis','I Sharma',
-                       'Umran Malik','Shivam Mavi','MK Pandey','Ashwani Kumar','Musheer Khan',]  #7 palyer missing
+                       'Umran Malik','Shivam Mavi','MK Pandey','Ashwani Kumar','Musheer Khan','JA Duffy']  #7 palyer missing
 
 bloodline = ['S Dube', 'RA Jadeja', 'M Jansen', 'SV Samson', 'JC Archer', 'NT Ellis', 'D Brevis',
               'VR Iyer', 'JP Inglis', 'T Natarajan', 'K Rabada', 'R Sai Kishore', 'Naman Dhir', 
@@ -135,7 +135,7 @@ roar_26 = ['SA Yadav','HH Pandya', 'MA Starc', 'Mohammed Siraj', 'Harpreet Brar'
             'Shahbaz Ahmed', 'R Ravindra', 'J Overton', 'KK Ahmed', 'Mukesh Kumar', 'V Puthur'] #3 Players missing
 
 defending_champions_bs = ['V Kohli', 'JC Buttler', 'RA Jadeja', 'TM Head', 'KH Pandya', 'MP Stoinis', 'S Dube', 'K Rabada',
-                           'MK Pandey', 'Abdul Samad', 'AM Rahane', 'MW Short', 'JP Inglis', 'T Natarajan', 'Rasikh Salam'] # 2 players remaining
+                           'MK Pandey', 'Abdul Samad', 'AM Rahane', 'MW Short', 'JP Inglis', 'T Natarajan', 'Rasikh Salam','JA Duffy'] # 2 players remaining
 
 bsmj = ['JM Sharma', 'PD Salt', 'Ishan Kishan', 'N Pooran', 'Abhishek Sharma', 'JJ Bumrah', 'YS Chahal', 'Mohsin Khan', 'PP Shaw', 
         'FA Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi'] #3 player missing
@@ -305,15 +305,15 @@ def total_points_df_return(df): #returns total_points_df
 
     # Economy, Wkt points, dot points, economy points
     bowling_df['economy'] = round(bowling_df['is_bowler_runs']/bowling_df['is_ball'] *6, 2)
-    bowling_df['bowling_wkt_points'] = bowling_df['is_bowl_out'] * 30
+    bowling_df['bowling_wkt_points'] = bowling_df['is_bowl_out'] * 35
     bowling_df['bowling_dot_points'] = bowling_df['isdot']
     bowling_df['bowling_economy_points'] = bowling_df.apply(lambda x: 0 if x['is_ball']<12 else
                                                             6 if x['economy'] < 5 else
                                                             4 if x['economy'] < 6 else
                                                             2 if x['economy'] < 7 else
-                                                            -2 if x['economy'] > 12 else
+                                                            -6 if x['economy'] > 12 else
                                                             -4 if x['economy'] > 11 else
-                                                            -6 if x['economy'] > 10 else 0, axis=1)
+                                                            -2 if x['economy'] > 10 else 0, axis=1)
     bowling_df['bowling_wkt_bonus'] = bowling_df['is_bowl_out'].apply(lambda x: 12 if x >= 5 else
                                                                     8 if x >= 4 else
                                                                     4 if x >= 3 else 0)
