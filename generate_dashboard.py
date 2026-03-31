@@ -204,7 +204,7 @@ tour_02 = {'attackers_xii':attackers_xii,
 tour_02_boost_df = pd.DataFrame({'player':['KL Rahul','SV Samson','MR Marsh','YBK Jaiswal','HH Pandya',
                                            'CV Varun','AK Markram','V Kohli','Shubman Gill',
                                            'Priyansh Arya','M Jansen','Abhishek Sharma','TM Head','RD Gaikwad',
-                                           'Q de Kock','D Padikkal','SS Iyer''SA Yadav'],
+                                           'Q de Kock','D Padikkal','SS Iyer','SA Yadav'],
                             'BOOST':[2,2,2,2,2,2,2,2,2,
                                      1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5]})
 
