@@ -56,11 +56,11 @@ attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','M
 bcc = ['SS Iyer','Rashid Khan','H Klaasen','TA Boult','JR Hazlewood','B Sai Sudharsan',
        'Azmatullah Omarzai','SE Rutherford','Dhruv Jurel','R Sai Kishore','S Gopal','Kartik Tyagi',
        'P Dubey','Harpreet Brar','Yash Thakur','SN Khan','R Powell','J Yadav','MJ Henry','Ashwani Kumar',
-       'Musheer Khan','Yash Dayal','Zeeshan Ansari'] # 2 player remaining
+       'Musheer Khan','Yash Dayal','Zeeshan Ansari','S Arora'] # 1 player remaining
 
 blazing_titans = ['Shubman Gill','Ishan Kishan','KK Ahmed','YS Chahal','E Malinga','T Stubbs','N Rana',
                   'SN Thakur','M Prasidh Krishna','DL Chahar','P Simran Singh','Naman Dhir','DS Rathi',
-                  'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh','JA Duffy'] # 7 Players remaining
+                  'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh','JA Duffy','CPL Connolly'] # 7 Players remaining
 
 eleven_stars = ['SA Yadav','Tilak Varma','AR Patel','Arshdeep Singh','Harshit Rana','Kuldeep Yadav',
                 'HV Patel','C Bosch','GD Phillips','TL Seifert','A Raghuvanshi','Ashutosh Sharma',
@@ -83,9 +83,9 @@ thalasons = ['RD Gaikwad','JC Buttler','SV Samson','JJ Bumrah','CV Varun','Washi
              'JO Holder','N Burger','PVD Chameera','JD Unadkat','Suryansh Shedge',
              'JG Bethell','MK Pandey'] # 8 players remaining
 
-troublemaker_kings = ['MR Marsh','N Pooran','B Kumar','Noor Ahmad','PJ Cummins','JP Inglis','FA Allen',
+troublemaker_kings = ['MR Marsh','N Pooran','B Kumar','Noor Ahmad','PJ Cummins','JP Inglis','FH Allen',
                       'LH Ferguson','Priyansh Arya','Aniket Verma','Harsh Dubey','Kumar Kushagra',
-                      'VG Arora','V Puthur','R Tewatia','WG Jacks','KR Sen','Yudhvir Singh'] #6 players remaining
+                      'VG Arora','V Puthur','R Tewatia','WG Jacks','KR Sen','Yudhvir Singh','Kartik Sharma'] #5 players remaining
 
 vsk = ['YBK Jaiswal','RG Sharma','TM Head','Abhishek Sharma','NT Ellis','SO Hetmyer','MP Stoinis',
        'MJ Santner','Abdul Samad','Arjun Tendulkar','R Minz','Vishnu Vinod','Mukesh Choudhary',
@@ -98,7 +98,7 @@ xi_strikers = ['RD Gaikwad','HH Pandya','Ishan Kishan','H Klaasen','T Stubbs','R
                'Dhruv Jurel','A Mhatre','Vishnu Vinod','V Puthur','PP Shaw','MJ Owen','Akash Singh',] #6players missing
 
 rebels = ['YBK Jaiswal','C Green','TM Head','JC Buttler','N Rana','Sameer Rizvi',
-          'V Suryavanshi','V Nigam','Prince Yadav','WG Jacks','Zeeshan Ansari'] #12 players remaining
+          'V Suryavanshi','V Nigam','Prince Yadav','WG Jacks','Zeeshan Ansari','Ashok Sharma','CPL Connolly'] #12 players remaining
 
 rcb_xii = ['Shubman Gill','SA Yadav','PD Salt','JM Sharma','RM Patidar','PJ Cummins',
            'JO Holder','Azmatullah Omarzai','R Minz','S Gopal','DS Rathi','M Siddharth',
@@ -114,7 +114,7 @@ bloodline = ['S Dube', 'RA Jadeja', 'M Jansen', 'SV Samson', 'JC Archer', 'NT El
 
 team_r_d = ['MR Marsh', 'Abhishek Sharma', 'N Pooran', 'JJ Bumrah', 'JR Hazlewood', 'B Sai Sudharsan', 'MJ Santner', 
             'RD Chahar', 'P Simran Singh', 'Aniket Verma', 'Harsh Dubey', 'Kartik Tyagi', 'Yash Thakur', 
-            'DA Miller', 'SN Khan'] #9 players missing
+            'DA Miller', 'SN Khan','FH Allen'] #9 players missing
 
 _7th_gear = ['Q de Kock', 'B Kumar', 'KK Ahmed', 'CV Varun', 'AM Rahane', 'Washington Sundar', 
              'MP Stoinis', 'R Parag', 'KH Pandya', 'Nithish Kumar Reddy', 'N Burger', 'DL Chahar', 
@@ -126,7 +126,8 @@ attackers_xii = ['KL Rahul', 'SO Hetmyer', 'SN Thakur', 'Mukesh Kumar', 'TU Desh
                  'Shashank Singh', 'Urvil Patel', 'Mukesh Choudhary', 'SM Curran'] #8 players missing
 
 sonu_48 = ['Rashid Khan', 'YS Chahal', 'Ravi Bishnoi', 'AK Markram', 'RK Singh', 'SE Rutherford', 'MA Starc', 
-           'Anuj Rawat', 'Arshad Khan', 'M Markande', 'D Padikkal', 'RA Tripathi', 'R Tewatia', 'D Ferreira', 'Akash Deep', 'A Kamboj', 'Rasikh Salam']
+           'Anuj Rawat', 'Arshad Khan', 'M Markande', 'D Padikkal', 'RA Tripathi', 'R Tewatia', 'D Ferreira',
+             'Akash Deep', 'A Kamboj', 'Rasikh Salam','Kartik Sharma','S Arora']
 
 ################
 ### Bidstrom Auction Teams ####
@@ -138,22 +139,23 @@ defending_champions_bs = ['V Kohli', 'JC Buttler', 'RA Jadeja', 'TM Head', 'KH P
                            'MK Pandey', 'Abdul Samad', 'AM Rahane', 'MW Short', 'JP Inglis', 'T Natarajan', 'Rasikh Salam','JA Duffy'] # 2 players remaining
 
 bsmj = ['JM Sharma', 'PD Salt', 'Ishan Kishan', 'N Pooran', 'Abhishek Sharma', 'JJ Bumrah', 'YS Chahal', 'Mohsin Khan', 'PP Shaw', 
-        'FA Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi'] #3 player missing
+        'FH Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi','Kartik Sharma'] #2player missing
 
 msk = ['B Sai Sudharsan', 'Shubman Gill', 'TA Boult', 'Noor Ahmad', 'N Wadhera', 'A Mhatre', 'P Simran Singh', 'V Nigam',
        'SN Khan', 'PHKD Mendis', 'Avesh Khan', 'N Burger', 'RD Chahar', 'A Badoni'] #3 players remaining
 
 arsenal = ['PJ Cummins', 'SP Narine', 'MS Dhoni', 'YBK Jaiswal', 'H Klaasen', 'Urvil Patel', 'LH Ferguson', 'Rashid Khan', 
-           'Sameer Rizvi', 'A Kamboj', 'Azmatullah Omarzai', 'WG Jacks', 'MP Yadav', 'Zeeshan Ansari', 'AR Patel','Tilak Varma'] #1 plYER MISSING
+           'Sameer Rizvi', 'A Kamboj', 'Azmatullah Omarzai', 'WG Jacks', 'MP Yadav', 
+           'Zeeshan Ansari', 'AR Patel','Tilak Varma','CPL Connolly'] #  all done cpl connolly doubt
 
 rebels_bs = ['MR Marsh', 'RD Gaikwad', 'TH David', 'R Parag', 'SV Samson', 'C Green', 'M Prasidh Krishna', 'R Sai Kishore', 
-             'Aniket Verma', 'N Rana', 'JG Bethell', 'Ramandeep Singh', 'PVD Chameera', 'Kumar Kushagra'] # 3 players missing
+             'Aniket Verma', 'N Rana', 'JG Bethell', 'Ramandeep Singh', 'PVD Chameera', 'Kumar Kushagra','S Arora'] # 2 players missing
 
 wildwolves = ['RG Sharma', 'JC Archer', 'CV Varun', 'Naman Dhir', 'M Markande', 'DS Rathi', 'DA Miller', 'Dhruv Jurel',
                'VR Iyer', 'MJ Owen', 'MJ Henry','L Ngidi','Ashutosh Sharma', 'HV Patel'] #3 players missing
 
 special_ones = ['KL Rahul', 'Q de Kock', 'M Jansen', 'Mohammed Shami', 'B Kumar', 'Harsh Dubey', 'VG Arora', 'D Padikkal', 
-                'JO Holder', 'SN Thakur', 'AJ Hosein', 'Prince Yadav', 'V Suryavanshi','Kuldeep Yadav','SH Johnson'] # 2 player missing
+                'JO Holder', 'SN Thakur', 'AJ Hosein', 'Prince Yadav', 'V Suryavanshi','Kuldeep Yadav','SH Johnson','Ashok Sharma'] # 2 player missing
 
 attackers_bs =  ['RM Patidar', 'RM Patidar', 'Nithish Kumar Reddy', 'Washington Sundar', 'DL Chahar', 'Priyansh Arya', 'Shashank Singh',
                   'M Shahrukh Khan', 'AS Roy', 'Sandeep Sharma', 'T Stubbs', 'SO Hetmyer', 'SE Rutherford', 'JD Unadkat','RD Rickelton', 'PWH de Silva','GD Phillips'] #
