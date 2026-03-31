@@ -98,7 +98,7 @@ xi_strikers = ['RD Gaikwad','HH Pandya','Ishan Kishan','H Klaasen','T Stubbs','R
                'Dhruv Jurel','A Mhatre','Vishnu Vinod','V Puthur','PP Shaw','MJ Owen','Akash Singh',] #6players missing
 
 rebels = ['YBK Jaiswal','C Green','TM Head','JC Buttler','N Rana','Sameer Rizvi',
-          'V Suryavanshi','V Nigam','Prince Yadav','WG Jacks','Zeeshan Ansari','Ashok Sharma','CPL Connolly'] #12 players remaining
+          'V Suryavanshi','V Nigam','Prince Yadav','WG Jacks','Zeeshan Ansari','Ashok Sharma','CPL Connolly','Abhinandan Singh'] #12 players remaining
 
 rcb_xii = ['Shubman Gill','SA Yadav','PD Salt','JM Sharma','RM Patidar','PJ Cummins',
            'JO Holder','Azmatullah Omarzai','R Minz','S Gopal','DS Rathi','M Siddharth',
