@@ -177,8 +177,13 @@ tour_01 = {'attackers':attackers,
 }
 
 #captain and Vice-Captain Boost
-tour_01_boost_df = pd.DataFrame({'player':[],
-                            'BOOST':[]})
+tour_01_boost_df = pd.DataFrame({'player':['C Green','V Kohli','HH Pandya','SV Samson','V Suryavanshi',
+                                           'SS Iyer','N Pooran','YBK Jaiswal','Ishan Kishan','AR Patel',
+                                           'AK Markram','D Brevis','RR Pant','CV Varun','SA Yadav',
+                                           'KL Rahul','B Sai Sudharsan','Noor Ahmad','SO Hetmyer','Shubman Gill'
+                                           ],
+                            'BOOST':[2,2,2,2,2,2,2,2,2,2,
+                                     1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,]})
 
 ###################
 ###################
@@ -196,8 +201,12 @@ tour_02 = {'attackers_xii':attackers_xii,
            'xi_strikers':xi_strikers,
            'sonu_48':sonu_48}
 
-tour_02_boost_df = pd.DataFrame({'player':[],
-                            'BOOST':[]})
+tour_02_boost_df = pd.DataFrame({'player':['KL Rahul','SV Samson','MR Marsh','YBK Jaiswal','HH Pandya',
+                                           'CV Varun','AK Markram','V Kohli','Shubman Gill',
+                                           'Priyansh Arya','M Jansen','Abhishek Sharma','TM Head','RD Gaikwad',
+                                           'Q de Kock','D Padikkal','SS Iyer''SA Yadav'],
+                            'BOOST':[2,2,2,2,2,2,2,2,2,
+                                     1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5]})
 
 #####################
 #####################
@@ -216,8 +225,12 @@ bidstrom_auction_2_0 = {'sonu_48_bs':sonu_48_bs,
                         'defending_champions_bs':defending_champions_bs,
                         'arsenal':arsenal}
 
-bidstrom_auction_2_0_boost_df = pd.DataFrame({'player':[],
-                            'BOOST':[]})
+bidstrom_auction_2_0_boost_df = pd.DataFrame({'player':['B Sai Sudharsan','KL Rahul','RD Gaikwad','RR Pant','Abhishek Sharma',
+                                                        'Priyansh Arya','YBK Jaiswal','RG Sharma','HH Pandya','V Kohli',
+                                                       'TM Head','SA Yadav','CV Varun','AR Patel','RM Patidar',
+                                                       'PD Salt','SS Iyer','MR Marsh', 'V Suryavanshi','Shubman Gill'],
+                            'BOOST':[2,2,2,2,2,2,2,2,2,2,
+                                     1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5]})
 
 #####################
 #####################
