@@ -114,7 +114,7 @@ bloodline = ['S Dube', 'RA Jadeja', 'M Jansen', 'SV Samson', 'JC Archer', 'NT El
 
 team_r_d = ['MR Marsh', 'Abhishek Sharma', 'N Pooran', 'JJ Bumrah', 'JR Hazlewood', 'B Sai Sudharsan', 'MJ Santner', 
             'RD Chahar', 'P Simran Singh', 'Aniket Verma', 'Harsh Dubey', 'Kartik Tyagi', 'Yash Thakur', 
-            'DA Miller', 'SN Khan','FH Allen'] #9 players missing
+            'DA Miller', 'SN Khan','FH Allen','RD Rickelton'] #9 players missing
 
 _7th_gear = ['Q de Kock', 'B Kumar', 'KK Ahmed', 'CV Varun', 'AM Rahane', 'Washington Sundar', 
              'MP Stoinis', 'R Parag', 'KH Pandya', 'Nithish Kumar Reddy', 'N Burger', 'DL Chahar', 
