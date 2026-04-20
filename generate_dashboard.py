@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings 
+import plotly.express as px
 warnings.filterwarnings('ignore')
 
 pd.set_option('display.max_rows',None)
@@ -435,6 +436,41 @@ bidstrom_auction_2_0_rank_df = rank_df_return(final_df,
 
 matches_completed = df['match_id'].nunique()
 
+def plotting_points_html(auction_name):
+    plot_df = total_points_df.groupby(['match_id',auction_name]).agg({'total_points':'sum'}).reset_index()
+
+    final_df = []
+
+    for team in plot_df[auction_name].unique():
+        rough_df = plot_df[plot_df[auction_name]==team].reset_index(drop=True)
+        rough_df['cum_total_points'] = rough_df['total_points'].cumsum()
+        rough_df['team'] = team
+        final_df.append(rough_df)
+
+    final_df = pd.concat(final_df)
+    final_df['match_number'] = final_df.groupby('team').cumcount() + 1
+
+    fig = px.line(
+        final_df,
+        x='match_number',
+        y='cum_total_points',
+        color='team',
+        hover_data=['match_id']
+    )
+
+    fig.update_layout(
+        title="Cumulative Points by Team",
+        xaxis_title="Matches",
+        yaxis_title="Points",
+        template="plotly_dark"
+    )
+
+    return fig.to_html(full_html=False, include_plotlyjs='cdn')
+
+plot_auction_tour_01 = plotting_points_html(auction_name='auction_tour_01')
+plot_auction_tour_02 = plotting_points_html(auction_name='auction_tour_02')
+plot_bidstrom_auction_2_0 = plotting_points_html(auction_name='bidstrom_auction_2.0_team')
+
 
 ###################################
 ###################################
@@ -455,6 +491,10 @@ html = html.replace("{{RANK_DATA_02}}", rank_json_02)
 html = html.replace("{{BIDSTROM_RANK_DATA}}", bidstrom_auction_2_0_json)
 html = html.replace("{{POINTS_DATA}}", points_json)
 html = html.replace("{{MATCHES_COMPLETED}}", str(df['match_id'].nunique()))
+
+html = html.replace("{{PLOT_AUCTION_TOUR_01}}", plot_auction_tour_01)
+html = html.replace("{{PLOT_AUCTION_TOUR_02}}", plot_auction_tour_02)
+html = html.replace("{{PLOT_BS_AUCTION_2_0}}", plot_bidstrom_auction_2_0)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
