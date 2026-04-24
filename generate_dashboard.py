@@ -439,19 +439,19 @@ matches_completed = df['match_id'].nunique()
 def plotting_points_html(auction_name):
     plot_df = total_points_df.groupby(['match_id',auction_name]).agg({'total_points':'sum'}).reset_index()
 
-    final_df = []
+    plot_final_df = []
 
     for team in plot_df[auction_name].unique():
         rough_df = plot_df[plot_df[auction_name]==team].reset_index(drop=True)
         rough_df['cum_total_points'] = rough_df['total_points'].cumsum()
         rough_df['team'] = team
-        final_df.append(rough_df)
+        plot_final_df.append(rough_df)
 
-    final_df = pd.concat(final_df)
-    final_df['match_number'] = final_df.groupby('team').cumcount() + 1
+    plot_final_df = pd.concat(final_df)
+    plot_final_df['match_number'] = plot_final_df.groupby('team').cumcount() + 1
 
     fig = px.line(
-        final_df,
+        plot_final_df,
         x='match_number',
         y='cum_total_points',
         color='team',
