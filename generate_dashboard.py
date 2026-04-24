@@ -448,7 +448,7 @@ def plotting_points_html(auction_name):
         plot_final_df.append(rough_df)
 
     final_df = pd.concat(final_df)
-    final_df['match_number'] = plot_final_df.groupby('team').cumcount() + 1
+    final_df['match_number'] = final_df.groupby('team').cumcount() + 1
 
     fig = px.line(
         final_df,
