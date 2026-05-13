@@ -52,47 +52,48 @@ else:
 
 attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','Mukesh Kumar',
              'AJ Hosein','V Suryavanshi','A Mhatre','Shashank Singh','V Nigam','PP Shaw','PHKD Mendis',
-             'L Wood','MP Yadav', ] # 6 player Remaining 
+             'L Wood','MP Yadav','AM Ghazanfar', 'PR Veer', 'R Smaran'] # 6 player Remaining 
 
 bcc = ['SS Iyer','Rashid Khan','H Klaasen','TA Boult','JR Hazlewood','B Sai Sudharsan',
        'Azmatullah Omarzai','SE Rutherford','Dhruv Jurel','R Sai Kishore','S Gopal','Kartik Tyagi',
        'P Dubey','Harpreet Brar','Yash Thakur','SN Khan','R Powell','J Yadav','MJ Henry','Ashwani Kumar',
-       'Musheer Khan','Yash Dayal','Zeeshan Ansari','S Arora'] # 1 player remaining
+       'Musheer Khan','Yash Dayal','Zeeshan Ansari','S Arora', 'Yash Raj Punja'] # 1 player remaining
 
 blazing_titans = ['Shubman Gill','Ishan Kishan','KK Ahmed','YS Chahal','E Malinga','T Stubbs','N Rana',
                   'SN Thakur','M Prasidh Krishna','DL Chahar','P Simran Singh','Naman Dhir','DS Rathi',
-                  'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh','JA Duffy','C Connolly'] # 7 Players remaining
+                  'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh','JA Duffy',
+                  'C Connolly','DA Payne','GF Linde', 'Himmat Singh','BJ Dwarshuis'] # 7 Players remaining
 
 eleven_stars = ['SA Yadav','Tilak Varma','AR Patel','Arshdeep Singh','Harshit Rana','Kuldeep Yadav',
                 'HV Patel','C Bosch','GD Phillips','TL Seifert','A Raghuvanshi','Ashutosh Sharma',
-                'Swapnil Singh','XC Bartlett',] # 6 player remaining
+                'Swapnil Singh','XC Bartlett','Navdeep Saini'] # 6 player remaining
 
 kingslayers = ['V Kohli','SP Narine','JC Archer','D Brevis','KH Pandya','MA Starc','K Rabada',
                'Avesh Khan','M Shahrukh Khan','MS Dhoni','KK Nair','RA Tripathi','Shahbaz Ahmed',
                'D Ferreira','SM Curran','I Sharma','Mustafizur Rahman','Akash Deep','Rasikh Salam','B Muzarabani',
-               'MD Choudhary'] # 4 players reamining
+               'MD Choudhary', 'DV Malewar','MD Shanaka'] # 4 players reamining
 
 super_kings = ['C Green','R Shepherd','M Jansen','Q de Kock','JM Sharma','M Pathirana','AK Markram',
                'VR Iyer','RD Chahar','AS Roy','Urvil Patel','Anuj Rawat','M Siddharth','Suyash Sharma',
-               'Sandeep Sharma','DA Miller','LS Livingstone','A Kamboj'] # 3 players reamaining
+               'Sandeep Sharma','DA Miller','LS Livingstone','A Kamboj','Akshat Raghuwanshi'] # 3 players reamaining
 
 knights = ['HH Pandya','S Dube','RA Jadeja','RR Pant','Mohammed Siraj','RK Singh','RM Patidar','TH David',
            'Nithish Kumar Reddy','Ramandeep Singh','MP Breetzke','T Natarajan','TU Deshpande','N Wadhera',
            'Sameer Rizvi','A Badoni','AA Kulkarni','MJ Suthar','Abishek Porel','A Nortje',
-           'KT Maphaka','Shivam Mavi'] # 1 player remaining
+           'KT Maphaka','Shivam Mavi', 'LG Pretorius'] # 1 player remaining
 
 thalasons = ['RD Gaikwad','JC Buttler','SV Samson','JJ Bumrah','CV Varun','Washington Sundar','R Parag',
              'JO Holder','N Burger','PVD Chameera','JD Unadkat','Suryansh Shedge',
-             'JG Bethell','MK Pandey','P Nissanka'] # 8 players remaining
+             'JG Bethell','MK Pandey','P Nissanka','Gurjapneet Singh', 'Raghu Sharma','M Tiwari'] # 8 players remaining
 
 troublemaker_kings = ['MR Marsh','N Pooran','B Kumar','Noor Ahmad','PJ Cummins','JP Inglis','FH Allen',
                       'LH Ferguson','Priyansh Arya','Aniket Verma','Harsh Dubey','Kumar Kushagra',
-                      'VG Arora','V Puthur','R Tewatia','WG Jacks','KR Sen','Yudhvir Singh','Kartik Sharma'] #5 players remaining
+                      'VG Arora','V Puthur','R Tewatia','WG Jacks','KR Sen','Yudhvir Singh','Kartik Sharma','Auqib Nabi','RA Bawa'] #5 players remaining
 
 vsk = ['YBK Jaiswal','RG Sharma','TM Head','Abhishek Sharma','NT Ellis','SO Hetmyer','MP Stoinis',
        'MJ Santner','Abdul Samad','Arjun Tendulkar','R Minz','Vishnu Vinod','Mukesh Choudhary',
        'Arshad Khan','Mohsin Khan','M Markande','Vijaykumar Vyshak','MJ Owen','MW Short','R Ravindra',
-       'SB Dubey','PH Solanki'] # 3 Playersr reamining
+       'SB Dubey','PH Solanki', 'RS Ghosh', 'N Sindhu'] # 3 Playersr reamining
 
 #Tour_02 Teams
 
