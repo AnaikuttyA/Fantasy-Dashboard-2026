@@ -143,36 +143,38 @@ sonu_48 = ['Rashid Khan', 'YS Chahal', 'Ravi Bishnoi', 'AK Markram', 'RK Singh',
 ### Bidstrom Auction Teams ####
 
 roar_26 = ['SA Yadav','HH Pandya', 'MA Starc', 'Mohammed Siraj', 'Harpreet Brar', 'M Siddharth', 'D Brevis', 'R Powell', 'MJ Santner',
-            'Shahbaz Ahmed', 'R Ravindra', 'J Overton', 'KK Ahmed', 'Mukesh Kumar', 'V Puthur','B Muzarabani'] #3 Players missing
+            'Shahbaz Ahmed', 'R Ravindra', 'J Overton', 'KK Ahmed', 'Mukesh Kumar', 'V Puthur','B Muzarabani','TL Seifert'] #3 Players missing
 
 defending_champions_bs = ['V Kohli', 'JC Buttler', 'RA Jadeja', 'TM Head', 'KH Pandya', 'MP Stoinis', 'S Dube', 'K Rabada',
-                           'MK Pandey', 'Abdul Samad', 'AM Rahane', 'MW Short', 'JP Inglis', 'T Natarajan', 'Rasikh Salam','JA Duffy'] # 2 players remaining
+                           'MK Pandey', 'Abdul Samad', 'AM Rahane', 'MW Short', 'JP Inglis', 'T Natarajan', 'Rasikh Salam','JA Duffy',
+                           'C Bosch'] # 2 players remaining
 
 bsmj = ['JM Sharma', 'PD Salt', 'Ishan Kishan', 'N Pooran', 'Abhishek Sharma', 'JJ Bumrah', 'YS Chahal', 'Mohsin Khan', 'PP Shaw', 
-        'FH Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi','Kartik Sharma'] #2player missing
+        'FH Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi','Kartik Sharma','SU Parakh'] #2player missing
 
 msk = ['B Sai Sudharsan', 'Shubman Gill', 'TA Boult', 'Noor Ahmad', 'N Wadhera', 'A Mhatre', 'P Simran Singh', 'V Nigam',
-       'SN Khan', 'PHKD Mendis', 'Avesh Khan', 'N Burger', 'RD Chahar', 'A Badoni'] #3 players remaining
+       'SN Khan', 'PHKD Mendis', 'Avesh Khan', 'N Burger', 'RD Chahar', 'A Badoni','XC Bartlett','PR Veer'] #3 players remaining
 
 arsenal = ['PJ Cummins', 'SP Narine', 'MS Dhoni', 'YBK Jaiswal', 'H Klaasen', 'Urvil Patel', 'LH Ferguson', 'Rashid Khan', 
            'Sameer Rizvi', 'A Kamboj', 'Azmatullah Omarzai', 'WG Jacks', 'MP Yadav', 
            'Zeeshan Ansari', 'AR Patel','Tilak Varma','C Connolly'] #  all done C Connolly doubt
 
 rebels_bs = ['MR Marsh', 'RD Gaikwad', 'TH David', 'R Parag', 'SV Samson', 'C Green', 'M Prasidh Krishna', 'R Sai Kishore', 
-             'Aniket Verma', 'N Rana', 'JG Bethell', 'Ramandeep Singh', 'PVD Chameera', 'Kumar Kushagra','S Arora'] # 2 players missing
+             'Aniket Verma', 'N Rana', 'JG Bethell', 'Ramandeep Singh', 'PVD Chameera', 'Kumar Kushagra','S Arora','Auqib Nabi'] # 2 players missing
 
 wildwolves = ['RG Sharma', 'JC Archer', 'CV Varun', 'Naman Dhir', 'M Markande', 'DS Rathi', 'DA Miller', 'Dhruv Jurel',
-               'VR Iyer', 'MJ Owen', 'MJ Henry','L Ngidi','Ashutosh Sharma', 'HV Patel'] #3 players missing
+               'VR Iyer', 'MJ Owen', 'MJ Henry','L Ngidi','Ashutosh Sharma', 'HV Patel','AM Ghazanfar'] #3 players missing
 
 special_ones = ['KL Rahul', 'Q de Kock', 'M Jansen', 'Mohammed Shami', 'B Kumar', 'Harsh Dubey', 'VG Arora', 'D Padikkal', 
-                'JO Holder', 'SN Thakur', 'AJ Hosein', 'Prince Yadav', 'V Suryavanshi','Kuldeep Yadav','SH Johnson','Ashok Sharma'] # 2 player missing
+                'JO Holder', 'SN Thakur', 'AJ Hosein', 'Prince Yadav', 'V Suryavanshi','Kuldeep Yadav','SH Johnson','Ashok Sharma','R Smaran'] # 2 player missing
 
 attackers_bs =  ['RM Patidar', 'RM Patidar', 'Nithish Kumar Reddy', 'Washington Sundar', 'DL Chahar', 'Priyansh Arya', 'Shashank Singh',
                   'M Shahrukh Khan', 'AS Roy', 'Sandeep Sharma', 'T Stubbs', 'SO Hetmyer', 'SE Rutherford', 'JD Unadkat','RD Rickelton',
-                    'PWH de Silva','GD Phillips','P Nissanka'] #
+                    'PWH de Silva','GD Phillips','P Nissanka','GF Linde'] #
 
 sonu_48_bs = ['SS Iyer', 'RR Pant', 'AK Markram', 'RK Singh', 'JR Hazlewood', 'R Tewatia', 'Abishek Porel',
-               'Suyash Sharma', 'TU Deshpande', 'LS Livingstone', 'R Shepherd', 'Umran Malik', 'Arshdeep Singh', 'R Bishnoi', 'A Raghuvanshi'] # 2 players remaining
+               'Suyash Sharma', 'TU Deshpande', 'LS Livingstone', 'R Shepherd', 'Umran Malik', 'Arshdeep Singh',
+                 'Ravi Bishnoi', 'A Raghuvanshi','RS Ghosh'] # 2 players remaining
 
 #################
 ### TOURNAMENT 01 TEAMS ###
