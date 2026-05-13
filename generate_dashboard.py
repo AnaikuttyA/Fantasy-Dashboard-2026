@@ -98,40 +98,46 @@ vsk = ['YBK Jaiswal','RG Sharma','TM Head','Abhishek Sharma','NT Ellis','SO Hetm
 #Tour_02 Teams
 
 xi_strikers = ['RD Gaikwad','HH Pandya','Ishan Kishan','H Klaasen','T Stubbs','Ramandeep Singh',
-               'Dhruv Jurel','A Mhatre','Vishnu Vinod','V Puthur','PP Shaw','MJ Owen','Akash Singh',] #6players missing
+               'Dhruv Jurel','A Mhatre','Vishnu Vinod','V Puthur','PP Shaw','MJ Owen','Akash Singh',
+               'D Madhushanka','N Sindhu'] #6players missing
 
 rebels = ['YBK Jaiswal','C Green','TM Head','JC Buttler','N Rana','Sameer Rizvi',
           'V Suryavanshi','V Nigam','Prince Yadav','WG Jacks','Zeeshan Ansari','Ashok Sharma',
-          'C Connolly','Abhinandan Singh','P Nissanka','Shivang Kumar','MD Choudhary'] #12 players remaining
+          'C Connolly','Abhinandan Singh','P Nissanka','Shivang Kumar','MD Choudhary','TL Seifert',
+          'SU Parakh','Raghu Sharma'] #12 players remaining
 
 rcb_xii = ['Shubman Gill','SA Yadav','PD Salt','JM Sharma','RM Patidar','PJ Cummins',
            'JO Holder','Azmatullah Omarzai','R Minz','S Gopal','DS Rathi','M Siddharth',
-           'J Overton','R Ravindra','LS Livingstone','MJ Henry','Yash Dayal'] # 3 players missing
+           'J Overton','R Ravindra','LS Livingstone','MJ Henry','Yash Dayal','Navdeep Saini',
+           'Akshat Raghuwanshi', 'RA Bawa'] # 3 players missing
 
 defending_champions = ['SS Iyer','V Kohli','SP Narine','RR Pant','Noor Ahmad','TH David','M Prasidh Krishna',
                        'MS Dhoni','Mohsin Khan','R Powell','J Yadav','PHKD Mendis','I Sharma',
-                       'Umran Malik','Shivam Mavi','MK Pandey','Ashwani Kumar','Musheer Khan','JA Duffy']  #7 palyer missing
+                       'Umran Malik','Shivam Mavi','MK Pandey','Ashwani Kumar','Musheer Khan','JA Duffy',
+                       'L Ngidi','Auqib Nabi','LG Pretorius','DV Malewar']  #7 palyer missing
 
 bloodline = ['S Dube', 'RA Jadeja', 'M Jansen', 'SV Samson', 'JC Archer', 'NT Ellis', 'D Brevis',
               'VR Iyer', 'JP Inglis', 'T Natarajan', 'K Rabada', 'R Sai Kishore', 'Naman Dhir', 
-              'Vijaykumar Vyshak', 'Sandeep Sharma', 'KK Nair', 'A Nortje', 'SB Dubey'] # 4 players missing
+              'Vijaykumar Vyshak', 'Sandeep Sharma', 'KK Nair', 'A Nortje', 'SB Dubey','RS Ghosh','M Tiwari'] # 4 players missing
 
 team_r_d = ['MR Marsh', 'Abhishek Sharma', 'N Pooran', 'JJ Bumrah', 'JR Hazlewood', 'B Sai Sudharsan', 'MJ Santner', 
             'RD Chahar', 'P Simran Singh', 'Aniket Verma', 'Harsh Dubey', 'Kartik Tyagi', 'Yash Thakur', 
-            'DA Miller', 'SN Khan','FH Allen','RD Rickelton'] #9 players missing
+            'DA Miller', 'SN Khan','FH Allen','RD Rickelton', 'Kumar Kushagra','GF Linde'] #9 players missing
 
 _7th_gear = ['Q de Kock', 'B Kumar', 'KK Ahmed', 'CV Varun', 'AM Rahane', 'Washington Sundar', 
              'MP Stoinis', 'R Parag', 'KH Pandya', 'Nithish Kumar Reddy', 'N Burger', 'DL Chahar', 
              'LH Ferguson', 'Avesh Khan', 'AS Roy', 'M Shahrukh Khan', 'Abishek Porel', 'VG Arora', 'Harpreet Brar', 
-             'Suyash Sharma', 'MP Yadav',] #4 plpayer missing
+             'Suyash Sharma', 'MP Yadav','HV Patel','Himmat Singh','R Smaran'] #4 plpayer missing
 
 attackers_xii = ['KL Rahul', 'SO Hetmyer', 'SN Thakur', 'Mukesh Kumar', 'TU Deshpande', 'AJ Hosein', 
                  'JD Unadkat', 'N Wadhera', 'Priyansh Arya', 'Abdul Samad', 'A Badoni', 'Arjun Tendulkar', 
-                 'Shashank Singh', 'Urvil Patel', 'Mukesh Choudhary', 'SM Curran','B Muzarabani'] #8 players missing
+                 'Shashank Singh', 'Urvil Patel', 'Mukesh Choudhary', 'SM Curran','B Muzarabani',
+                 'GD Phillips','Shahbhaz Ahmed', 'PR Veer','Ashutosh Sharma','JG bethell','MD Shanaka'] #8 players missing
 
 sonu_48 = ['Rashid Khan', 'YS Chahal', 'Ravi Bishnoi', 'AK Markram', 'RK Singh', 'SE Rutherford', 'MA Starc', 
            'Anuj Rawat', 'Arshad Khan', 'M Markande', 'D Padikkal', 'RA Tripathi', 'R Tewatia', 'D Ferreira',
-             'Akash Deep', 'A Kamboj', 'Rasikh Salam','Kartik Sharma','S Arora']
+             'Akash Deep', 'A Kamboj', 'Rasikh Salam','Kartik Sharma','S Arora','A Raghuvanshi','Arshdeep Singh',
+             'AA Kulkarni']
 
 ################
 ### Bidstrom Auction Teams ####
