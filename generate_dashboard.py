@@ -57,16 +57,16 @@ attackers = ['PD Salt','KL Rahul','Mohammed Shami','Ravi Bishnoi','AM Rahane','M
 bcc = ['SS Iyer','Rashid Khan','H Klaasen','TA Boult','JR Hazlewood','B Sai Sudharsan',
        'Azmatullah Omarzai','SE Rutherford','Dhruv Jurel','R Sai Kishore','S Gopal','Kartik Tyagi',
        'P Dubey','Harpreet Brar','Yash Thakur','SN Khan','R Powell','J Yadav','MJ Henry','Ashwani Kumar',
-       'Musheer Khan','Yash Dayal','Zeeshan Ansari','S Arora', 'Yash Raj Punja'] # 1 player remaining
+       'Musheer Khan','Yash Dayal','Zeeshan Ansari','S Arora', 'Yash Raj Punja','Salil Arora'] # 1 player remaining
 
 blazing_titans = ['Shubman Gill','Ishan Kishan','KK Ahmed','YS Chahal','E Malinga','T Stubbs','N Rana',
                   'SN Thakur','M Prasidh Krishna','DL Chahar','P Simran Singh','Naman Dhir','DS Rathi',
                   'Prince Yadav','D Padikkal','J Overton','Umran Malik','Akash Singh','JA Duffy',
-                  'C Connolly','DA Payne','GF Linde', 'Himmat Singh','BJ Dwarshuis'] # 7 Players remaining
+                  'C Connolly','DA Payne','GF Linde', 'Himmat Singh','BJ Dwarshuis','T Dahiya'] # 7 Players remaining
 
 eleven_stars = ['SA Yadav','Tilak Varma','AR Patel','Arshdeep Singh','Harshit Rana','Kuldeep Yadav',
                 'HV Patel','C Bosch','GD Phillips','TL Seifert','A Raghuvanshi','Ashutosh Sharma',
-                'Swapnil Singh','XC Bartlett','Navdeep Saini'] # 6 player remaining
+                'Swapnil Singh','XC Bartlett','Navdeep Saini','T Vijay','Ravi Singh'] # 6 player remaining
 
 kingslayers = ['V Kohli','SP Narine','JC Archer','D Brevis','KH Pandya','MA Starc','K Rabada',
                'Avesh Khan','M Shahrukh Khan','MS Dhoni','KK Nair','RA Tripathi','Shahbaz Ahmed',
@@ -88,12 +88,12 @@ thalasons = ['RD Gaikwad','JC Buttler','SV Samson','JJ Bumrah','CV Varun','Washi
 
 troublemaker_kings = ['MR Marsh','N Pooran','B Kumar','Noor Ahmad','PJ Cummins','JP Inglis','FH Allen',
                       'LH Ferguson','Priyansh Arya','Aniket Verma','Harsh Dubey','Kumar Kushagra',
-                      'VG Arora','V Puthur','R Tewatia','WG Jacks','KR Sen','Yudhvir Singh','Kartik Sharma','Auqib Nabi','RA Bawa'] #5 players remaining
+                      'VG Arora','V Puthur','R Tewatia','WG Jacks','KR Sen','Yudhvir Singh','Kartik Sharma','Auqib Nabi','RA Bawa','SS Mishra'] #5 players remaining
 
 vsk = ['YBK Jaiswal','RG Sharma','TM Head','Abhishek Sharma','NT Ellis','SO Hetmyer','MP Stoinis',
        'MJ Santner','Abdul Samad','Arjun Tendulkar','R Minz','Vishnu Vinod','Mukesh Choudhary',
        'Arshad Khan','Mohsin Khan','M Markande','Vijaykumar Vyshak','MJ Owen','MW Short','R Ravindra',
-       'SB Dubey','PH Solanki', 'RS Ghosh', 'N Sindhu'] # 3 Playersr reamining
+       'SB Dubey','PH Solanki', 'RS Ghosh', 'N Sindhu','SH Johnson'] # 3 Playersr reamining
 
 #Tour_02 Teams
 
