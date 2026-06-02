@@ -151,7 +151,7 @@ defending_champions_bs = ['V Kohli', 'JC Buttler', 'RA Jadeja', 'TM Head', 'KH P
                            'C Bosch'] # 2 players remaining
 
 bsmj = ['JM Sharma', 'PD Salt', 'Ishan Kishan', 'N Pooran', 'Abhishek Sharma', 'JJ Bumrah', 'YS Chahal', 'Mohsin Khan', 'PP Shaw', 
-        'FH Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi','Kartik Sharma','SU Parakh'] #2player missing
+        'FH Allen', 'D Ferreira', 'E Malinga', 'SB Dubey', 'Kartik Tyagi','Kartik Sharma','SU Parakh','T Dahiya'] #2player missing
 
 msk = ['B Sai Sudharsan', 'Shubman Gill', 'TA Boult', 'Noor Ahmad', 'N Wadhera', 'A Mhatre', 'P Simran Singh', 'V Nigam',
        'SN Khan', 'PHKD Mendis', 'Avesh Khan', 'N Burger', 'RD Chahar', 'A Badoni','XC Bartlett','PR Veer'] #3 players remaining
@@ -161,10 +161,10 @@ arsenal = ['PJ Cummins', 'SP Narine', 'MS Dhoni', 'YBK Jaiswal', 'H Klaasen', 'U
            'Zeeshan Ansari', 'AR Patel','Tilak Varma','C Connolly'] #  all done C Connolly doubt
 
 rebels_bs = ['MR Marsh', 'RD Gaikwad', 'TH David', 'R Parag', 'SV Samson', 'C Green', 'M Prasidh Krishna', 'R Sai Kishore', 
-             'Aniket Verma', 'N Rana', 'JG Bethell', 'Ramandeep Singh', 'PVD Chameera', 'Kumar Kushagra','S Arora','Auqib Nabi'] # 2 players missing
+             'Aniket Verma', 'N Rana', 'JG Bethell', 'Ramandeep Singh', 'PVD Chameera', 'Kumar Kushagra','S Arora','Auqib Nabi','Salil Arora'] # 2 players missing
 
 wildwolves = ['RG Sharma', 'JC Archer', 'CV Varun', 'Naman Dhir', 'M Markande', 'DS Rathi', 'DA Miller', 'Dhruv Jurel',
-               'VR Iyer', 'MJ Owen', 'MJ Henry','L Ngidi','Ashutosh Sharma', 'HV Patel','AM Ghazanfar'] #3 players missing
+               'VR Iyer', 'MJ Owen', 'MJ Henry','L Ngidi','Ashutosh Sharma', 'HV Patel','AM Ghazanfar','M Pathirana'] #3 players missing
 
 special_ones = ['KL Rahul', 'Q de Kock', 'M Jansen', 'Mohammed Shami', 'B Kumar', 'Harsh Dubey', 'VG Arora', 'D Padikkal', 
                 'JO Holder', 'SN Thakur', 'AJ Hosein', 'Prince Yadav', 'V Suryavanshi','Kuldeep Yadav','SH Johnson','Ashok Sharma','R Smaran'] # 2 player missing
